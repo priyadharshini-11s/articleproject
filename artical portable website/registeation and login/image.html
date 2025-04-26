@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Gallery with JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="image.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="image.js" defer></script>
+    <style>
+      /* Style for the buttons */
+      .navigation-buttons {
+        position: fixed;
+        top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 10;
+      }
+      .navigation-buttons button {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .navigation-buttons button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+      <button id="back-button">Back</button>
+      <button id="next-button">Next</button>
+    </div>
+
+    <div class="lightbox">
+      <div class="wrapper">
+        <header>
+          <div class="photographer">
+            <i class="uil uil-camera"></i>
+            <span></span>
+          </div>
+          <div class="buttons">
+            <i class="uil uil-import"></i>
+            <i class="close-icon uil uil-times"></i>
+          </div>
+        </header>
+        <div class="preview-img">
+          <div class="img"><img src="" alt="preview-img"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="search">
+      <img src="personal.jpeg" alt="search-img">
+      <div class="content">
+        <h1>Image Gallery</h1>
+        <p>Search and download any images within a second</p>
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input type="text" placeholder="Search images">
+        </div>
+      </div>
+    </section>
+    
+    <section class="gallery">
+      <ul class="images"></ul>
+      <button class="load-more">Load More</button>
+    </section>
+
+    <script>
+      // Event listener for the Back button
+      document.getElementById('back-button').addEventListener('click', function() {
+        window.location.href = 'main.html'; // Replace with your previous page URL
+      });
+
+      // Event listener for the Next button
+      document.getElementById('next-button').addEventListener('click', function() {
+        window.location.href = 'flex.html'; // Replace with your next page URL
+      });
+    </script>
+  </body>
+</html>

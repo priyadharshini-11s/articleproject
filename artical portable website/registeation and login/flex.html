@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="flex style.css">
+    <body>
+        <div>
+            <h1 style="text-align: center;">Welcome</h1>
+        </div>
+    
+        <div class="container">
+            <!-- First row of 3 items -->
+            <div class="item">
+                <img src="fimg1.jpg" alt="video">
+                <button onclick="location.href='flexbox1.html'">FAQ Accordion</button>
+            </div>
+            <div class="item">
+                <img src="fimg2.jpg" alt="introduction">
+                <button onclick="location.href='flex2chat.html'">Gemini Chatbot</button>
+            </div>
+            <div class="item">
+                <img src="fimg3.png" alt="chatgpt">
+                <button onclick="location.href='ckeditor5-builder-44.3.0/index.html'">Words</button>
+            </div>
+    
+            <!-- Second row of 3 items -->
+            <div class="item">
+                <img src="fimg4.jpg" alt="website">
+                <button onclick="location.href='imageslider.html'">Reference Paper</button>
+            </div>
+            <div class="item">
+                <img src="fimg5.png" alt="checker">
+                <button onclick="location.href='downloader.html'">File Downloader</button>
+            </div>
+            <div class="item">
+                <img src="fimg6.webp" alt="profile">
+                <button onclick="location.href='editor.html'">Image Editor</button>
+            </div>
+        </div>
+    
+        <div class="container">
+            <button class="nav-button" id="backBtn" onclick="goBack()">Back</button>
+            <button class="nav-button" id="nextBtn" onclick="goNext()">Next</button>
+        </div>
+      <script>
+      function goBack() {
+        window.location.href = "main.html"; // Replace with your desired URL for the Back button
+      }
+
+      function goNext() {
+        window.location.href = "note.html"; // Replace with your desired URL for the Next button
+      }
+    </script>
+</body>
+
+</html>

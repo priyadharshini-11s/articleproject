@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to Speech Converter</title>
+    <link rel="stylesheet" href="textspeech.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>Text to Speech Converter</header>
+      <textarea placeholder="Enter text"></textarea>
+      <button>Convert to Speech</button>
+    </div>
+<!-- Navigation Buttons -->
+<div class="nav-buttons">
+  <button class="nav-button" id="backBtn" onclick="goBack()">Back</button>
+  <button class="nav-button" id="nextBtn" onclick="goNext()">Next</button>
+</div>
+<script src="textspeech.js" defer></script>
+<script>
+  function goBack() {
+    window.location.href = "main.html"; // Replace with the URL of your previous page
+  }
+
+  function goNext() {
+    window.location.href = "star.html"; // Replace with the URL of your next page
+  }
+</script>
+
+<style>
+  /* Style for navigation buttons */
+  .nav-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(21, 10, 65);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-button:hover {
+    background-color: rgb(57, 38, 142);
+  }
+
+  /* Center the buttons at the bottom of the page */
+  .nav-buttons {
+    position: fixed;
+    bottom: 20px; /* Space from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex;
+    gap: 20px; /* Space between buttons */
+  }
+
+  /* Ensure buttons appear next to each other */
+  .nav-buttons button {
+    margin: 0;
+  }
+
+  button:focus {
+    outline: 3px solid #ffbc42; /* Bright color for visibility */
+  }
+</style>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Dictionary App in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="dict.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN Link for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <style>
+      /* Nav buttons style */
+      .nav-button {
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: rgb(21, 10, 65);
+          color: white;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          text-align-last: center;
+          transition: background-color 0.3s ease;
+      }
+
+      .nav-button:hover {
+          background-color: rgb(57, 38, 142);
+      }
+
+      button:focus {
+          outline: 3px solid #ffbc42; /* Bright color for visibility */
+      }
+
+      /* Centering and fixing the buttons to the bottom */
+      .container {
+          position: fixed;
+          bottom: 20px; /* Space from the bottom */
+          left: 50%;
+          transform: translateX(-50%); /* Center horizontally */
+          display: flex;
+          gap: 10px; /* Space between buttons */
+      }
+
+      /* Ensure buttons appear next to each other */
+      .container button {
+          margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>English Dictionary</header>
+      <div class="search">
+        <input type="text" placeholder="Search a word" required spellcheck="false">
+        <i class="fas fa-search"></i>
+        <span class="material-icons">close</span>
+      </div>
+      <p class="info-text">Type any existing word and press enter to get meaning, example, synonyms, etc.</p>
+      <ul>
+        <li class="word">
+          <div class="details">
+            <p>__</p>
+            <span>_ _</span>
+          </div>
+          <i class="fas fa-volume-up"></i>
+        </li>
+        <div class="content">
+          <li class="meaning">
+            <div class="details">
+              <p>Meaning</p>
+              <span>___</span>
+            </div>
+          </li>
+          <li class="example">
+            <div class="details">
+              <p>Example</p>
+              <span>___</span>
+            </div>
+          </li>
+          <li class="synonyms">
+            <div class="details">
+              <p>Synonyms</p>
+              <div class="list"></div>
+            </div>
+          </li>
+        </div>
+      </ul>
+    </div>
+    <script src="dict script.js"></script>
+
+    <!-- Navigation Buttons -->
+    <div class="container">
+      <button class="nav-button" id="backBtn" onclick="goBack()">Back</button>
+      <button class="nav-button" id="nextBtn" onclick="goNext()">Next</button>
+    </div>
+
+    <script>
+      function goBack() {
+        window.location.href = "main.html"; // Replace with the URL of your previous page
+      }
+
+      function goNext() {
+        window.location.href = "trans.html"; // Replace with the URL of your next page
+      }
+    </script>
+  </body>
+</html>

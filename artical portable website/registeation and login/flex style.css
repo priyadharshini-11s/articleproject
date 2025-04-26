@@ -1,0 +1,137 @@
+/* Global reset for margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with Flexbox to center content vertically and horizontally */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensuring it takes full height of the viewport */
+    background: linear-gradient(#427fc5, #7cc1fe);
+    margin: 0;
+    padding: 0;
+}
+
+/* Titlebar style */
+.titlebar {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: hsl(239, 85%, 26%); /* Red color for the title */
+}
+
+/* Container style for holding the items */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Center items in the container */
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Each item inside the container */
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: calc(33.33% - 20px); /* 3 items per row by default */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for items */
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Style for images inside items */
+.item img {
+    width: 100%;
+    height: auto;
+    max-height: 100px; /* Make sure images don't exceed 100px */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+button {
+    margin-top: 15px; /* Increased space between image and button */
+    padding: 10px 20px;
+    background-color: rgb(54, 106, 157);
+    color: hwb(0 98% 0%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 100;
+    transition: background-color 0.3s, transform 0.2s;
+}
+/* Button hover effect */
+button:hover {
+    background-color: hwb(242 6% 59% / 0.486);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increased shadow for hover effect */
+}
+
+/* Button focus effect for accessibility */
+button:focus {
+    outline: 3px solid #ffbc42; /* Bright color for visibility */
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .item {
+        width: calc(50% - 20px); /* 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: 100%; /* 1 item per row on small screens */
+    }
+
+    .titlebar {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Nav buttons style */
+.nav-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:#140234; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color:rgb(113, 13, 160);
+}
+
+button:focus {
+    outline: 3px solid #ffbc42; /* Bright color for visibility */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Language Translator | CodingNepal</title>
+    <link rel="stylesheet" href="trans.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN Link for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Translation"></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button>Translate Text</button>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button class="nav-button" id="backBtn" onclick="goBack()">Back</button>
+      <button class="nav-button" id="nextBtn" onclick="goNext()">Next</button>
+    </div>
+
+    <script src="countries.js"></script>
+    <script src="trans.js"></script>
+
+    <script>
+      function goBack() {
+        window.location.href = "main.html"; // Replace with the URL of your previous page
+      }
+
+      function goNext() {
+        window.location.href = "wordcount.html"; // Replace with the URL of your next page
+      }
+    </script>
+
+    <style>
+      /* Style for navigation buttons */
+      .nav-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: rgb(21, 10, 65);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-button:hover {
+        background-color: rgb(57, 38, 142);
+      }
+
+      /* Center the buttons at the bottom of the page */
+      .nav-buttons {
+        position: fixed;
+        bottom: 20px; /* Space from the bottom */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        display: flex;
+        gap: 20px; /* Space between buttons */
+      }
+
+      /* Ensure buttons appear next to each other */
+      .nav-buttons button {
+        margin: 0;
+      }
+
+      button:focus {
+        outline: 3px solid #ffbc42; /* Bright color for visibility */
+      }
+    </style>
+  </body>
+</html>
